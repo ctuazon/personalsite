@@ -84,10 +84,11 @@
 			// End
 		</script>
 		<script>
+			var files = '';
       			(async () => {
         			const response = await fetch('https://api.github.com/repos/ctuazon/personalsite/contents/posts');
         			const data = await response.json();
-        			var files = '';
+        			
         			for (let file of data) {
           				files += `file.split('.').slice(0, -1).join('.')`;
         			}
